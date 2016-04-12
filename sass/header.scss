@@ -1,0 +1,40 @@
+.header {
+    .active {
+        font-weight: 600;
+    }
+}
+header.navbar {
+    background: #37afa2;
+    height: 70px;
+    
+    .logo {
+        display: inline-block;
+        padding: 16px 14px 0px 22px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .mypg {
+        float: right;
+        display: -webkit-inline-box;
+        padding: 17px 22px 0px 40px;
+    }
+
+    .mypg a {
+        text-decoration: none;
+    }
+
+    .mypg .username {
+        display: inline-block;
+        color: white;
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+
+    .mypg img {
+        height: 36px;
+    }
+}
+

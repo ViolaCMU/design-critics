@@ -1,0 +1,168 @@
+.design-detail .design-intro {
+  width: 100%;
+  height: 500px;
+  background: #ffffff;
+  margin-bottom: -50px; }
+
+.design-detail .col-md-8 {
+  width: 810px; }
+
+.design-detail .col-md-4 {
+  width: 405px; }
+
+.design-detail .design-work {
+  height: 1000px; }
+
+.design-detail .comments-container {
+  height: 1000px; }
+
+.header .active {
+  font-weight: 600; }
+
+header.navbar {
+  background: #37afa2;
+  height: 70px; }
+  header.navbar .logo {
+    display: inline-block;
+    padding: 16px 14px 0px 22px; }
+  header.navbar .logo img {
+    height: 40px; }
+  header.navbar .mypg {
+    float: right;
+    display: -webkit-inline-box;
+    padding: 17px 22px 0px 40px; }
+  header.navbar .mypg a {
+    text-decoration: none; }
+  header.navbar .mypg .username {
+    display: inline-block;
+    color: white;
+    padding-top: 10px;
+    padding-right: 20px; }
+  header.navbar .mypg img {
+    height: 36px; }
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "Proxima Nova";
+  font-size: 12pt;
+  width: 100%; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+header {
+  height: 50px;
+  padding-left: 50px;
+  vertical-align: middle;
+  background: #37afa2; }
+  header h3 {
+    line-height: 50px;
+    color: #ffffff; }
+
+footer {
+  width: 100%;
+  height: 50px; }
+  footer .btn-1 {
+    width: 100%;
+    height: 100%; }
+  footer .btn-2 {
+    width: 50%;
+    height: 100%; }
+
+.content-container {
+  margin: 0 35px; }
+
+.btn {
+  border: none;
+  font-size: 1em; }
+
+.btn-active {
+  background: #37afa2;
+  color: #ffffff; }
+
+.btn-default {
+  background: #ffffff;
+  color: #b3b3b3; }
+
+.form-row {
+  margin: 25px 0; }
+  .form-row input {
+    padding: 5px 0;
+    width: 100%; }
+  .form-row input[type=text] {
+    border: none;
+    background: inherit;
+    border-bottom: 1px solid #b3b3b3; }
+
+.form-label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 15px; }
+
+.col-md-4 {
+  width: 31%;
+  margin: 1%;
+  display: block; }
+
+.newwork {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(1, 1, 1, 0.5);
+  width: 100vw;
+  height: 100vh; }
+
+.newwork .addDesignModal {
+  width: 600px;
+  background: #F8F8F8;
+  margin: 200px auto; }

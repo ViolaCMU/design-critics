@@ -1,0 +1,21 @@
+.design-detail {
+    background: $bgColor;
+    .design-intro {
+        width: 100%;
+        height: 500px;
+        background: #ffffff;
+        margin-bottom: -50px;
+    }
+    .col-md-8 {
+        width: 810px;
+    }
+    .col-md-4 {
+        width: 405px;
+    }
+    .design-work {
+        height: 1000px;
+    }
+    .comments-container {
+        height: 1000px;
+    }
+}
