@@ -1,11 +1,13 @@
 $lgreen: #37afa2;
 $dgren: #034d5b;
 $bgColor: #F8F8F8;
+$fontGrey: #B3B3B3;
 
 body {
     font-family: "Proxima Nova";
     font-size: 12pt;
     width: 100%;
+    background: $bgColor;
 }
 
 .show {
@@ -18,7 +20,7 @@ body {
 
 
 // general
-header {
+header.title {
     height: 50px;
     padding-left: 50px;
     vertical-align: middle;
@@ -28,7 +30,7 @@ header {
         color: #ffffff;
     }
 }
-footer {
+.btn-bar {
     width: 100%;
     height: 50px;
     .btn-1 {
@@ -42,6 +44,7 @@ footer {
 }
 .content-container {
     margin: 0 35px;
+    overflow: hidden;
 }
 .btn {
     border: none;
