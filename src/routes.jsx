@@ -4,7 +4,7 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 
 var Main = require('./components/main');
-var Design = require('./components/Design/design');
+var Design = require('./components/Design/design-detail');
 var Home = require('./components/home');
 var Account = require('./components/Account/account');
 
