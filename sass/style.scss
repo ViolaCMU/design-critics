@@ -1,12 +1,15 @@
 $lgreen: #37afa2;
-$dgren: #034d5b;
+$dgreen: #034d5b;
 $bgColor: #F8F8F8;
+$font: #434343;
 $fontGrey: #B3B3B3;
 
 body {
-    font-family: "Proxima Nova";
-    font-size: 12pt;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     width: 100%;
+    color: #434343;
     background: $bgColor;
 }
 
@@ -18,6 +21,47 @@ body {
     display: none;
 }
 
+//.dark-text {
+//    color: #434343;
+//}
+.light-text {
+    color: #ffffff;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 0;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px 0;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+p {
+    line-height: 1.4em;
+}
+.sub-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $fontGrey;
+}
+
+.page-container {
+    margin: 0 8%;
+    overflow: hidden;
+}
+
+.fa{
+    font-size: 12px;
+}
 
 // general
 header.title {
@@ -47,8 +91,24 @@ header.title {
     overflow: hidden;
 }
 .btn {
-    border: none;
-    font-size: 1em;
+//    border: 1.5px solid $lgreen;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+.btn-lg {
+    height: 60px;
+    line-height: 54px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1.5px solid $lgreen;
+}
+.btn-sm {
+    height: 40px;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid $lgreen;
 }
 .btn-active{
     background: $lgreen;
@@ -56,7 +116,7 @@ header.title {
 }
 .btn-default{
     background: #ffffff;
-    color: #b3b3b3;
+    color: $lgreen;
 }
 
 .form-row {
@@ -83,19 +143,23 @@ header.title {
     display: block;
 }
 
-// new work
-.newwork {
-    position: fixed;
-    top:0;
-    left:0;
-    background: rgba(1,1,1,0.5);
-    width: 100vw;
-    height: 100vh;
+// avatar
+.avatar {
+    overflow: hidden;
+    .profpic {
+        float: left;
+    }
+    h2 {
+        margin-top: 15px;
+        position: absolute;
+        margin-left: 100px;
+    }
+    p {
+        margin-top: 42px;
+        position: absolute;
+        margin-left: 100px;
+    }
 }
 
-.newwork .addDesignModal{
-    width: 600px;
-    background: $bgColor;
-    margin: 200px auto;
-}
+
 

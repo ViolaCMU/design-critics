@@ -2,10 +2,12 @@ var React = require('react');
 var DesignPrev = require('../design/design-prev');
 var NewWork = require('./newwork');
 
+
 module.exports = React.createClass({
+    
   getInitialState: function(){
       var myworks = [{id:1, name: "assignment4"}, {id:2, name: "assignment2"}, {id:3, name: "assignment3"}];
-    return {myworks : myworks, addNew : false};
+      return {myworks : myworks, addNew : false};
   },
   addDesign: function(){
         console.log(this.state.addNew);

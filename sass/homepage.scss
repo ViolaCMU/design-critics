@@ -1,0 +1,124 @@
+.popular-designs {
+    margin-top: 50px;
+    padding: 0 calc(42% - 445px); 
+}
+.search {
+    width: 100%;
+    
+    form {
+        width: 60%;
+        height: 50px;
+        margin-top: 60px;
+        display: block;
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    input[type=text] {
+        float: left;
+        width: 80%;
+        height: 40px;
+        border: 0px;
+        background-color: #F8F8F8;
+        color: #d3d3d3;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    input[type=image] {
+        float: right;
+        padding: 15px;
+    }
+}
+.home-thumbnail {
+    overflow: hidden;
+    width: 320px;
+    height: 270px;
+    margin: 1%;
+    display: inline-block;
+    box-shadow:0px 1px 15px -1px rgba(0,0,0,0.1);
+    transition: box-shadow 0.4s linear;
+    
+    .info {
+        height: 40px;
+        width: 92%;
+        background-color: #ffffff;
+        overflow: hidden;
+        padding: 10px 4%;
+
+        .profile{
+            width: 40px;
+            height: 40px;
+            background-image: url(./img/profile1.jpg);
+            background-size: cover;
+            background-position: center;
+            display: block;
+            border-radius: 40px;
+            float: left;
+        }
+        .username {
+            float: left;
+            padding: 10px;
+        }
+    }
+    .viewdata{
+        font-size: 12px;
+        float: right;
+        padding: 3%;
+        color: #b3b3b3;
+    }
+
+    .description{
+        height: 170px;
+        z-index: 900;
+        background: rgba(3, 77, 91, 0.85);
+        position: absolute;
+        width: 280px;
+        padding: 20px;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.6s ease-in;
+        cursor: pointer;
+
+    }
+
+    .description_title{
+        transform: translateY(200px);
+        color: white;
+        transition: transform 0.3s ease-in;
+    }
+
+    .description_words{
+        transform: translateY(200px);
+        position: relative;
+        font-size: 14px;
+        line-height: 1.4em;
+        font-weight: 400;
+        color: white;
+        transition: transform 0.3s ease-in;
+    }
+
+    .thumbnail-bg{
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        height: 270px;
+        transition: all 0.6s linear;
+    }
+
+    .img_thumbnail{
+        width: 100%;
+        transition: all 0.3s linear;
+    }
+}
+.home-thumbnail:hover .description {
+    opacity: 1;
+}
+
+.home-thumbnail:hover .img {
+    margin-left: -5%;
+    width: 110%;
+}
+
+.home-thumbnail:hover .description_title, .home-thumbnail:hover .description_words{
+    transform: translateY(0);
+}

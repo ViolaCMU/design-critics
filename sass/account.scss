@@ -1,0 +1,20 @@
+$lgreen: #37afa2;
+$dgren: #034d5b;
+$bgColor: #F8F8F8;
+$fontGrey: #B3B3B3;
+
+// new work
+.newwork {
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(1,1,1,0.5);
+    width: 100vw;
+    height: 100vh;
+}
+
+.newwork .addDesignModal{
+    width: 600px;
+    background: $bgColor;
+    margin: 200px auto;
+}

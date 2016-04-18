@@ -4,8 +4,8 @@ module.exports = React.createClass({
   render: function() {
     return <div className="design-work col-md-8">
         <header className="btn-bar">
-            <button className="btn btn-2 btn-default">My Comment</button>
-            <button className="btn btn-2 btn-active">All Comment</button>
+            <a className="btn btn-2 btn-lg btn-default">My Comment</a>
+            <a className="btn btn-2 btn-lg btn-active">All Comment</a>
         </header>
         <image className="design-work-img" src="./src/Desktop.png" />
     </div>

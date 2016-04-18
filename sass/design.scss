@@ -1,11 +1,12 @@
+$dgreen: #034d5b;
 $fontGrey: #B3B3B3;
 
 .design-detail {
     .design-intro {
         width: 100%;
-        height: 500px;
+        height: 450px;
         background: #ffffff;
-        margin-bottom: -50px;
+        margin-bottom: -120px;
     }
     .col-md-8 {
         width: 64%;
@@ -18,11 +19,28 @@ $fontGrey: #B3B3B3;
         float: left;
     }
     .design-intro-section {
-        background: pink;
+//        background: pink;
+        margin-top: 50px;
+        .design-description {
+            margin: 30px 0;
+        }
+        .avatar img{
+            width: 80px;
+            height: 80px;
+        }
+        box-sizing: border-box;
+        height: 160px;
     }
     .design-intro-section:nth-of-type(2) {
-        background: lightgreen;
+//        background: lightgreen;
         border-left: 1px solid $fontGrey;
+        padding-left: 80px;
+        .follow {
+            width: 250px;
+            margin-top: 15px;
+            color: $dgreen;
+            border-color: $dgreen;
+        }
     }
     .design-work {
         height: 1000px;
