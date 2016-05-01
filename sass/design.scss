@@ -25,8 +25,18 @@ $fontGrey: #B3B3B3;
             margin: 30px 0;
         }
         .avatar img{
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
+        }
+        .avatar {
+            h2 {
+                margin-top: 5px;
+                margin-left: 90px;
+            }
+            p.sub-text {
+                margin-top: 35px;
+                margin-left: 90px;
+            }
         }
         box-sizing: border-box;
         height: 160px;
@@ -34,22 +44,145 @@ $fontGrey: #B3B3B3;
     .design-intro-section:nth-of-type(2) {
 //        background: lightgreen;
         border-left: 1px solid $fontGrey;
-        padding-left: 80px;
+        padding-left: 5%;
         .follow {
+            height: 55px;
             width: 250px;
-            margin-top: 15px;
+            margin-top: 25px;
             color: $dgreen;
-            border-color: $dgreen;
+            border: 2px solid $dgreen;
+            line-height: 55px;
         }
     }
     .design-work {
         height: 1000px;
+        position: relative;
         .design-work-img {
             width: 100%;
+        }
+        .btn-bar {
+            height: 40px;
+        }
+        
+        .circle{
+            //display: none;
+            border-radius: 100px;
+            
+            //transform: translate(-50%,-50%);
+        }
+
+        .out{
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%,-50%);
+            animation-name: bounceOut;
+            animation-delay: 0s;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-out;
+        }
+
+        .inside{
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .out.red{
+            background: rgba(230,65,66,0.3);
+            border: 1px solid #E64142;
+            box-shadow:  0px 0px 10px -1px rgba(230,65,66,0.8);
+
+        }
+
+        .inside.red{
+            background: #E64142;
+        }
+
+        .out.green{
+            background: rgba(55,175,162,0.3);
+            border: 1px solid #37AFA2;
+            box-shadow:  0px 0px 10px -1px rgba(55,175,162,0.8);
+
+        }
+
+        .inside.green{
+            background: #37AFA2;
+        }
+
+        @keyframes bounceOut{
+            0%       {transform: translate(-50%,-50%) scale(0.8);}
+            80%      {transform: translate(-50%,-50%) scale(1.2);}
+            100%     {transform: translate(-50%,-50%) scale(1);}
         }
     }
     .comments-container {
         height: 1000px;
+        .title {
+            width: 100%;
+        }
+        .comments-list {
+            .comment {
+                background: #ffffff;
+                .avatar {
+                    //width: 400px;
+                   overflow: hidden;
+
+                }
+
+                .profpic {
+                    padding: 10px 20px;
+                   float: left;
+                }
+
+                .profpic img{
+                    width: 50px;
+                }
+                p.comment-text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.4em;
+                }
+
+                .comment-number{
+                    display: block;
+                    width: 12px;
+                    height: 16px;
+                    border-radius: 20px;
+                    background: #E64142;
+                    font-size: 18px;
+                    color: white;
+                    font-weight: 900;
+                    padding: 10px 12px;
+                    float: right;
+                    margin: 15px
+                }
+
+                .comment-content{
+
+                    padding: 20px;
+                    //width: 400px;
+                    overflow: hidden;
+                }
+
+                .comment-activity{
+                    overflow: hidden;
+                }
+
+                .fa {
+                    padding: 5px;
+                }
+                .comment-agree{
+                    float: right;
+                    font-size: 12px;
+                    color: #E64142;
+                }
+            }
+        }
     }
     
 }

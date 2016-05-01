@@ -8,6 +8,7 @@ body {
     font-family: "proxima-nova", sans-serif;
     font-size: 14px;
     font-weight: 400;
+    line-height: 1.4em;
     width: 100%;
     color: #434343;
     background: $bgColor;
@@ -58,6 +59,11 @@ p {
     margin: 0 8%;
     overflow: hidden;
 }
+@media screen and (max-width: 799px) {
+    .page-container {
+        margin: 0 20px;
+    }
+}
 
 .fa{
     font-size: 12px;
@@ -98,14 +104,14 @@ header.title {
 }
 .btn-lg {
     height: 60px;
-    line-height: 54px;
+    line-height: 50px;
     font-size: 18px;
     font-weight: 500;
     border: 1.5px solid $lgreen;
 }
 .btn-sm {
     height: 40px;
-    line-height: 36px;
+    line-height: 38px;
     font-size: 16px;
     font-weight: 400;
     border: 1px solid $lgreen;
@@ -117,24 +123,6 @@ header.title {
 .btn-default{
     background: #ffffff;
     color: $lgreen;
-}
-
-.form-row {
-    margin: 25px 0;
-    input {
-        padding: 5px 0;
-        width: 100%;
-    }
-    input[type=text] {
-        border: none;
-        background: inherit;
-        border-bottom: 1px solid #b3b3b3;
-    }
-}
-.form-label {
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 15px;
 }
 
 .col-md-4 {

@@ -15,9 +15,9 @@ module.exports = React.createClass({
         //this.bindAsObject(new Firebase(rootUrl + 'designs/'), 'designs');
     },
   render: function() {
-      console.log(this);
+      //console.log(this);
     return <header className="navbar">
-            <Link to="/" className="logo">
+            <Link to="/home" className="logo">
                 <img src="./img/logo.png" />
             </Link>
             

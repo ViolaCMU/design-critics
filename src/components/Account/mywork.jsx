@@ -10,7 +10,7 @@ module.exports = React.createClass({
       return {myworks : myworks, addNew : false};
   },
   addDesign: function(){
-        console.log(this.state.addNew);
+        //console.log(this.state.addNew);
         this.setState({addNew: true});
   },
   dismissModal: function(){
@@ -22,12 +22,34 @@ module.exports = React.createClass({
     });
     
     return <div>
+        <div className="mywork">
+            
+            <h1>My Work</h1>
+            <ul className="wrk_ctgry">
+                <li>All</li>
+                <li>category#1</li>
+                <li>category#2</li>
+                <li>category#3</li>
+            </ul>
+
+            <div className="myprojects">
+                <div className="upload" onClick={this.addDesign} >
+                    <i className="fa fa-plus" aria-hidden="true"></i>
+                </div>
+                <div className="project"></div>
+                <div className="project"></div>
+                <div className="project"></div>
+                <div className="project"></div>
+                <div className="project"></div>
+                <div className="clear"></div>
+            </div>
+
+        </div>
       {designSet}
-      <button onClick={this.addDesign} >Add A Design</button>  
+       
       <div className={"newwork " + (this.state.addNew ? "show" : "hide")}>
         <NewWork dismiss={this.dismissModal} />
       </div>
-      <image src="./src/Desktop.png" />
     </div>
   }
 });
