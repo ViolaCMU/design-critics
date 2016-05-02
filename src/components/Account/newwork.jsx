@@ -12,9 +12,9 @@ module.exports = React.createClass({
         };
     },
     componentWillMount: function(){
-        var FirebaseRef = new Firebase("https://resplendent-heat-8533.firebaseio.com/designs/");
+        var FirebaseRef = new Firebase(rootUrl + 'designs/');
         this.bindAsArray(FirebaseRef, "designs");
-        //console.log(this);
+        console.log(this);
         //this.bindAsObject(new Firebase(rootUrl + 'designs/'), 'designs');
     },
     addDesign: function(e){
