@@ -5,7 +5,7 @@ var Route = ReactRouter.Route;
 
 var Main = require('./components/main');
 var Design = require('./components/Design/design-detail');
-var Home = require('./components/home');
+var Home = require('./components/Homepage/home');
 var Account = require('./components/Account/account');
 
 module.exports = (

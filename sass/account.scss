@@ -1,0 +1,315 @@
+$lgreen: #37afa2;
+$dgren: #034d5b;
+$bgColor: #F8F8F8;
+$font: #434343;
+$fontGrey: #B3B3B3;
+
+.clear {clear: both;}
+
+.mypage {
+    background-color: #f3f3f3;
+    height: 600px;
+    
+}
+
+
+.account-profile {
+    background-color: #034d5b;
+    height: 540px;
+    padding-left: 120px;
+    padding-right: 120px;
+    color: white;
+
+    .profpic {
+        padding: 1%;
+        margin-right: 3%;
+    }
+
+    .profpic img {
+        width: 135px;
+        height: auto;
+    }
+
+    .usrinfo1{
+        padding-top: 80px;
+        display: inline-flex;
+    }
+
+
+    .usrinfo {
+        padding: 1% 1% 1% 2%;
+        width: 80%;
+
+    }
+
+    h1 {   
+        font-weight: 700;
+        font-size: 24px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    p.usr2 {
+        padding-top: 2px;
+    }
+
+    p.usr3 {
+        font-size: .9em;
+        font-weight: 100;
+    }
+
+    .usrinfo2{
+        padding-top: 55px;
+
+        ul {
+            margin: 1%;
+        }
+
+        li {
+            color: #b4dfd6;
+            display: inline-block;
+        }
+
+        ul.item li {
+            padding: 0.5% 7% 0.5% 0.5%;
+            display: inline-block;
+        }
+
+        .numbers{
+            font-size: 6.3em;
+            font-weight: 700;
+            padding-top: 30px;
+        }
+
+        ul.numbers li {
+            display: inline-block;
+            padding: 0.5% 6% 0.5% 0%;
+        }
+
+        .item {
+            font-size: 1.9em;
+            font-weight: 600;
+            padding-top: 35px;
+            li:nth-child(2){
+                padding-left: 4.5%; padding-right: 7.3%;
+            }
+            li:nth-child(3){
+                padding-right: 4.5%;
+            }
+        }
+
+        .subinfo {
+            display: inline-block;
+            width: 64%;
+        }
+
+        .buttons {
+            display: inline-block;
+            float: right;
+            width: 34%;
+            margin: 1%;
+        }
+
+        .button {
+            display: inline-block;
+            border: 2px solid #e64142;
+            color: #e64142;
+            width: 100%;
+            margin-top: 1.5%;
+            margin-bottom: 1.5%;
+            height: 55px;
+            text-align: center;
+        }
+
+        .button p {
+            padding-top: 16px;
+            font-size: 18px;
+        }
+    }
+}
+
+/***************/
+
+.mywork {
+    background-color: #f2f2f2;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+.wrk_ctgry {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    ul {
+            margin: 1%;
+        }
+
+        li {
+            color: #b4dfd6;
+            display: inline-block;
+        }
+}
+
+.wrk_ctgry li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.myprojects .upload {
+    width: 30%;
+    height: 200px;
+    margin: 1%;
+    display: block;
+    float: left;
+    background-color: #e64142;
+    text-align: center;
+    color: #ffffff;
+    i {
+        font-size: 32px;
+        position: relative;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s linear;
+    }
+}
+.myprojects .upload:hover i {
+    font-size: 46px;
+    
+}
+
+.myprojects div.project {
+    width: 30%;
+    height: 200px;
+    margin: 1%;
+    display: block;
+    float: left;
+    background-color: #b3b3b3;
+}
+
+.myprojects div:last-of-type {
+    float: none;
+}
+
+.mywork h1 {
+    color: #37afa2;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    .account-profile .usrinfo2 {
+        .item {
+    font-size: 1.7em;
+    
+}  
+    .numbers{
+    font-size: 5.7em;
+}
+    }
+}
+
+@media screen and (max-width: 1190px) {
+
+    .account-profile .usrinfo2 {
+    .item {
+    font-size: 1.5em;
+    
+}  
+    .numbers{
+    font-size: 5em;
+}
+    }
+}
+
+@media screen and (max-width: 1090px) {
+.account-profile .usrinfo2 {
+    .item {
+    font-size: 1.3em;
+    
+}  
+    .numbers{
+    font-size: 4.4em;
+}
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+.account-profile .usrinfo2 {
+    .item {
+    font-size: 1.1em;
+    
+}  
+    .numbers{
+    font-size: 3.8em;
+}
+    }
+    
+}
+
+
+// new work
+.newwork {
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(1,1,1,0.5);
+    width: 100vw;
+    height: 100vh;
+}
+
+.newwork .addDesignModal{
+    width: 600px;
+    background: $bgColor;
+    margin: 160px auto;
+}
+
+.form-row {
+    color: $fontGrey;
+    margin: 20px 0 35px 0;
+    input {
+        padding: 5px 0;
+        width: 100%;
+    }
+    input[type=text] {
+        border: none;
+        background: inherit;
+        border-bottom: 1px solid #b3b3b3;
+    }
+    #design-file {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    #design-file + label {
+        height: 100px;
+        width: calc(100% - 2px);
+        font-size: 16px;
+        font-weight: 400;
+        color: $fontGrey;
+        display: inline-block;
+        border: 1px dashed $fontGrey;
+        text-align: center;
+        line-height: 96px;
+    }
+
+    #design-file:focus + label,
+    #design-file + label:hover {
+        color: $font;
+    }
+}
+.form-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}

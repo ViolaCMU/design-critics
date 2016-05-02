@@ -1,9 +1,10 @@
 var React = require('react');
+var Comment = require('./comment');
 
 module.exports = React.createClass({
   render: function() {
     return <ul className="comments-list">
-     1233
+        <Comment />
     </ul>
     
   }
