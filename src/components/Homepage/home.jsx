@@ -11,11 +11,12 @@ module.exports = React.createClass({
             </form>
         </div>
         <div className="popular-designs">
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
-            <Thumbnail />
+            <Thumbnail design="./img/design_work/design06.jpg" author="Alice" avatar="user4.jpg" />
+            <Thumbnail design="./img/design_work/design05.jpg" author="Tomas" avatar="user1.jpg" />
+            <Thumbnail design="./img/design_work/design15.jpg" author="Julio" avatar="user2.jpg" />
+            <Thumbnail design="./img/design_work/design17.jpg" author="Amenda" avatar="user3.jpg" />
+            <Thumbnail design="./img/design_work/design16.jpg" author="Amenda" avatar="user3.jpg" />
+            <Thumbnail design="./img/design_work/design18.jpg" author="Tomas" avatar="user1.jpg" />
         </div>
     </div>
   }

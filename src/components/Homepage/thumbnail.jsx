@@ -7,7 +7,7 @@ module.exports = React.createClass({
     return <div className="home-thumbnail">
         <div className="info">       
             <div className="profile"></div>
-            <h2 className="username">Alice</h2>
+            <h2 className="username">{this.props.author}</h2>
             <div className="viewdata">
                 <div>
                     <i className="fa fa-eye"></i> 1235
@@ -22,7 +22,7 @@ module.exports = React.createClass({
             <p className="description_words">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley... </p>
         </Link>
         <div className="thumbnail-bg">
-            <img src="./img/design06.jpg" className="img_thumbnail" />
+            <img src={this.props.design} className="img_thumbnail" />
         </div>
     </div>
   }
