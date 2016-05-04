@@ -6,6 +6,20 @@ var Avatar = require('../Layout/avatar');
 var Link = Router.Link;
 
 module.exports = React.createClass({
+    getInitialState: function(){
+        return {cmtType: 'all', design: {}};
+    },
+    componentWillMount: function(){
+        this.setState({design: {
+            author:{},
+            image:'',
+            comments: [1,2,3]
+        }});
+    },
+    onShowCmt: function(type){
+        this.setState({cmtType: type});
+        console.log(this.state.cmtType);
+    },
   render: function() {
     return <div className="design-detail">
         <div className="design-intro">
@@ -17,13 +31,13 @@ module.exports = React.createClass({
                 </div>
                 <div className="col-md-4 design-intro-section">
                     <Avatar />
-                    <a className="btn btn-sm follow">Follow</a>
+                    <a className="btn btn-sm follow">Follow<i className="fa fa-check" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
         <div className="content-container">
-            <DesignWork />    
-            <div className="comments-container col-md-4"><Comments /></div>
+            <DesignWork onShowCmt={this.onShowCmt} />    
+            <div className="comments-container col-md-4"><Comments type={this.state.cmtType} comments={this.state.design.comments} /></div>
         </div>
     </div>
     

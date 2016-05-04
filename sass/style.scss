@@ -59,14 +59,9 @@ p {
     margin: 0 8%;
     overflow: hidden;
 }
-@media screen and (max-width: 799px) {
-    .page-container {
-        margin: 0 20px;
-    }
-}
 
 .fa{
-    font-size: 12px;
+    font-size: 15px;
 }
 
 // general
@@ -149,5 +144,20 @@ header.title {
     }
 }
 
-
+@media screen and (max-width: 799px) {
+    .page-container {
+        margin: 0 20px;
+    }
+    .content-container {
+        overflow: inherit;
+    }
+    .btn-bar {
+        width: 100vw;
+        background-color: #F8F8F8;
+    }
+    
+    .btn-bar .btn-2 {
+        display: none;
+    }
+}
 

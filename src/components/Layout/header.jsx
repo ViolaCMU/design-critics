@@ -23,7 +23,7 @@ module.exports = React.createClass({
             
             <div className="mypg">
                 <Link to="/user/me" className="username">Amenda</Link>
-                <div className="profpic"><img src="./img/profilePicture.png" /></div>
+                <div className="profpic"><img src="./img/profile-img.gif" /></div>
             </div>
         </header>
     

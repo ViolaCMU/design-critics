@@ -25,9 +25,9 @@ module.exports = React.createClass({
     return <div>
         <div className="account-profile">
             <div className="usrinfo1">
-                <div className="profpic"><img src="./img/profilePicture.png" /></div>
+                <div className="profpic"><img src="./img/profile-img.gif" /></div>
                 <div className="usrinfo">
-                    <h1 className="usr1">Username</h1>
+                    <h1 className="usr1">Amenda</h1>
                     <p className="usr2">UX Designer</p><br />
                     <p className="usr3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>

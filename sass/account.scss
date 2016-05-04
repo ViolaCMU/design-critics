@@ -28,6 +28,7 @@ $fontGrey: #B3B3B3;
     .profpic img {
         width: 135px;
         height: auto;
+        border-radius: 200px;
     }
 
     .usrinfo1{
@@ -54,10 +55,10 @@ $fontGrey: #B3B3B3;
 //    }
 
     p.usr3 {
-        font-size: .9em;
-    font-weight: 100;
-    padding-top: 20px;
-    line-height: 1.5em;
+        font-size: 1em;
+        font-weight: 100;
+        padding-top: 20px;
+        line-height: 1.5em;
     }
 
     .usrinfo2{
@@ -131,31 +132,31 @@ $fontGrey: #B3B3B3;
     }
 }
 .subinfo {
-            display: inline-block;
-            width: 68%;
-            color: #b4dfd6;
-            margin-top: 1%;
-            margin-bottom: 1%;
-            p {
-                font-size: 110px;
-                font-weight: 800;
-                padding-top: 30px;
-                line-height: inherit;
-            }
+    display: inline-block;
+    width: 68%;
+    color: #b4dfd6;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    p {
+        font-size: 110px;
+        font-weight: 800;
+        padding-top: 30px;
+        line-height: inherit;
+    }
 
-            h2 {
-                font-size: 30px;
-                font-weight: 600;
-                padding-top: 50px;
-            }
-            div {
-                text-align: center;
-                display: inline-block;
-                padding-right: 6%;
-                width: 18%;
-                margin-top: 1%;
-            }
-        }
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 50px;
+    }
+    div {
+        text-align: center;
+        display: inline-block;
+        padding-right: 6%;
+        width: 18%;
+        margin-top: 1%;
+    }
+}
 
 #follow.active {
     
@@ -309,8 +310,8 @@ $fontGrey: #B3B3B3;
         }
 
         p.usr3 {
-            font-size: .8em;
             font-weight: 100;
+            padding: 10px;
         }
         .button p {
             padding-right: 2px;
@@ -395,6 +396,9 @@ $fontGrey: #B3B3B3;
                 margin-right: 15px;
             }
 
+            
+        }
+        .usrinfo2, usrinfo1 {
             .subinfo h2 {
                 font-size: 13px;
                 padding-top: 5px;
@@ -403,13 +407,13 @@ $fontGrey: #B3B3B3;
             .subinfo p {
                 font-size: 36px;
                 padding-top: 10px;
-            }
-
-            p.usr3 {
-                font-size: .7em;
+            } 
+        } 
+        
+        p.usr3 {
+                font-size: .8em;
                 font-weight: 100;
             }
-        }
     }
     
     .myprojects div.project, .mygroups div.group, .myprojects div.upload, .mygroups div.upload {
