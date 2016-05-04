@@ -1,5 +1,6 @@
 $dgreen: #034d5b;
 $bgColor: #F8F8F8;
+$red: #E64142;
 $fontGrey: #B3B3B3;
 
 .design-detail {
@@ -101,13 +102,13 @@ $fontGrey: #B3B3B3;
 
         .out.red{
             background: rgba(230,65,66,0.3);
-            border: 1px solid #E64142;
+            border: 1px solid $red;
             box-shadow:  0px 0px 10px -1px rgba(230,65,66,0.8);
 
         }
 
         .inside.red{
-            background: #E64142;
+            background: $red;
         }
 
         .out.green{
@@ -128,7 +129,7 @@ $fontGrey: #B3B3B3;
         }
     }
     .comments-container {
-        height: 1000px;
+//        height: 1000px;
         background: #ffffff;
         .title {
             width: 100%;
@@ -136,9 +137,50 @@ $fontGrey: #B3B3B3;
         .mobile-comment-title {
             display: none;
         }
+        .add-btn {
+            border-radius: 30px;
+            border: 2px solid $red;
+            color: $red;
+            font-weight: 600;
+            width: 60px;
+            height: 60px;
+            line-height: 54px;
+            display: block;
+            margin: 10px auto;
+        }
+        .add-btn.selected {
+            background: $red;
+            color: #ffffff;
+        }
+        .new-comment {
+            padding: 5px 0;
+            .sub-text {
+                text-align: center;
+                color: $red;
+                font-size: 0.7em;
+            }
+            form {
+                .form-row {
+                    margin: 10px 0;
+                }
+            
+                textarea {
+                    width: 90%;
+                    display: block;
+                    resize: none;
+                    margin: 0 auto;
+                    border-color: $fontGrey;
+                }
+                .btn {
+                    display: block;
+                    width: 90%;
+                    margin: 5px auto;
+                }
+            }
+        }
         .comments-list {
             overflow-y: scroll;
-            height: 850px;
+            height: 1000px;
             .comment {
                 background: #ffffff;
                 border-bottom: 1px solid $bgColor;
@@ -209,6 +251,9 @@ $fontGrey: #B3B3B3;
 }
 
 @media screen and (max-width: 799px) {
+    .design-detail {
+        background: #ffffff;
+    }
     /*description*/
     .design-detail .design-intro-section {
         box-sizing: border-box;
@@ -267,6 +312,7 @@ $fontGrey: #B3B3B3;
         line-height: 55px;
         float: right;
         margin-top: 5px;
+        font-size: 12px;
     }
 
 
@@ -286,15 +332,7 @@ $fontGrey: #B3B3B3;
             display: block;
         }
     }
-
-
-
-    /*
-    <p class="sub-text design_mobile" style="
-        
-    ">Meydad's Design</p>
-    */
-
+    
     /*design comment*/
 
     .design-detail .comments-container {
@@ -303,6 +341,10 @@ $fontGrey: #B3B3B3;
         .mobile-comment-title {
             display: block;
             width: 100vw;
+        }
+        .new-comment {
+            width: 100vw;
+            background: #ffffff;
         }
     }
 
@@ -322,7 +364,9 @@ $fontGrey: #B3B3B3;
     .design-detail .comments-container .comments-list {
         overflow-y: initial;
         margin-left: 20px;
-        margin-right: -55px;
+        margin-right: -75px;
+        padding-right: 20px;
+        background: #ffffff;
     }
 
     .design-detail .comments-container .comments-list .comment {
@@ -351,5 +395,15 @@ $fontGrey: #B3B3B3;
         float: right;
         margin-left: 35px;
     }
+    .design-detail {
+        .btn-bar {
+            width: 100vw;
+            background-color: #F8F8F8;
+        }
 
+        .btn-bar .btn-2 {
+            display: none;
+        }
+    }
+    
 }

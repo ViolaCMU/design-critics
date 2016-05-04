@@ -22,7 +22,7 @@ module.exports = React.createClass({
             <p className="description_words">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley... </p>
         </Link>
         <div className="thumbnail-bg">
-            <img src="img/Main3.png" className="img_thumbnail" />
+            <img src="./img/design06.jpg" className="img_thumbnail" />
         </div>
     </div>
   }
