@@ -379,6 +379,9 @@
     line-height: 55px; }
     .design-detail .design-intro-section:nth-of-type(2) .follow span {
       padding-right: 7px; }
+  .design-detail .design-intro-section:nth-of-type(2) .follow.active {
+    background: #034d5b;
+    color: #ffffff; }
 
 .design-detail .design-work {
   height: 1000px;
