@@ -8,7 +8,7 @@ var Link = Router.Link;
 module.exports = React.createClass({
     getInitialState: function(){
         return {cmtType: 'all', design: {},
-               addingCmt: false};
+               addingCmt: false, followed: ''};
     },
     componentWillMount: function(){
         this.setState({design: {
@@ -24,6 +24,13 @@ module.exports = React.createClass({
     setMouseState: function(state){
         this.setState({addingCmt: state});
     },
+    toggleFollow: function(){
+        if(this.state.followed === ''){
+            this.setState({followed: 'active'});  
+        }else{
+            this.setState({followed: ''});  
+        }
+    },
   render: function() {
     return <div className="design-detail">
         <div className="design-intro">
@@ -35,7 +42,7 @@ module.exports = React.createClass({
                 </div>
                 <div className="col-md-4 design-intro-section">
                     <Avatar />
-                    <a className="btn btn-sm follow">Follow<i className="fa fa-check" aria-hidden="true"></i></a>
+                    <a className={"btn btn-sm follow " + this.state.followed} onClick={this.toggleFollow}>Follow<i className="fa fa-check" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

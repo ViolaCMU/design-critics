@@ -58,6 +58,10 @@ $fontGrey: #B3B3B3;
                 padding-right: 7px;
             }
         }
+        .follow.active {
+            background: $dgreen;
+            color: #ffffff;
+        }
     }
     .design-work {
         height: 1000px;
