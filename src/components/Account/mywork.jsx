@@ -45,7 +45,20 @@ module.exports = React.createClass({
             </div>
 
         </div>
-      {designSet}
+        <div className="mygroup">
+            
+            <h1>My Group</h1>
+
+            <div className="mygroups">
+                <div href="#" className="upload">
+                    <i className="fa fa-plus" aria-hidden="true"></i>
+                </div>
+                <div className="group"></div>
+                <div className="group"></div>
+                <div className="clear"></div>
+            </div>
+
+        </div>
        
       <div className={"newwork " + (this.state.addNew ? "show" : "hide")}>
         <NewWork dismiss={this.dismissModal} />

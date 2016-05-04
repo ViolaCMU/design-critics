@@ -4,7 +4,7 @@ var ReactDOM = require('react-dom');
 module.exports = React.createClass({
     getInitialState: function(){
         // get existing circles
-        return {circles: [], i: 0};
+        return {circles: [], i: 0, newCmt: false};
     },
     componentDidMount: function() {
         window.addEventListener('resize', this.handleResize);
@@ -23,22 +23,25 @@ module.exports = React.createClass({
 //        })});
     },
     addCircle: function(e){
-        var img = ReactDOM.findDOMNode(this.refs.designWork);
-        console.log(img.offsetLeft);
-        console.log(img.offsetTop);
-        console.log(img.offsetWidth);
-        console.log(img.offsetHeight);
-        console.log(e.pageX);
-        console.log(e.pageY);
-        var newCircleStyle = {
-          position: 'absolute',
-          top: e.pageY - 400,
-          left: e.pageX - 48
-        };
-        console.log(newCircleStyle);
-        var newC = {id:this.state.i, name: 'hello', style: newCircleStyle};
-        this.setState({i:this.state.i+1});
-        this.setState({circles: this.state.circles.concat(newC)});
+        if(this.state.newCmt) {
+            var img = ReactDOM.findDOMNode(this.refs.designWork);
+            console.log(img.offsetLeft);
+            console.log(img.offsetTop);
+            console.log(img.offsetWidth);
+            console.log(img.offsetHeight);
+            console.log(e.pageX);
+            console.log(e.pageY);
+            var newCircleStyle = {
+              position: 'absolute',
+              top: e.pageY - 400,
+              left: e.pageX - 48
+            };
+            console.log(newCircleStyle);
+            var newC = {id:this.state.i, name: 'hello', style: newCircleStyle};
+            this.setState({i:this.state.i+1});
+            this.setState({circles: this.state.circles.concat(newC)});
+        }
+        
 //        this.setState({addNew: true});
     },
   render: function() {

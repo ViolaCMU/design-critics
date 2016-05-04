@@ -28,65 +28,74 @@
     font-size: 24px;
     padding-top: 5px;
     padding-bottom: 5px; }
-  .account-profile p.usr2 {
-    padding-top: 2px; }
   .account-profile p.usr3 {
     font-size: .9em;
-    font-weight: 100; }
+    font-weight: 100;
+    padding-top: 20px;
+    line-height: 1.5em; }
   .account-profile .usrinfo2 {
-    padding-top: 55px; }
-    .account-profile .usrinfo2 ul {
-      margin: 1%; }
-    .account-profile .usrinfo2 li {
-      color: #b4dfd6;
-      display: inline-block; }
-    .account-profile .usrinfo2 ul.item li {
-      padding: 0.5% 7% 0.5% 0.5%;
-      display: inline-block; }
-    .account-profile .usrinfo2 .numbers {
-      font-size: 6.3em;
-      font-weight: 700;
-      padding-top: 30px; }
-    .account-profile .usrinfo2 ul.numbers li {
-      display: inline-block;
-      padding: 0.5% 6% 0.5% 0%; }
-    .account-profile .usrinfo2 .item {
-      font-size: 1.9em;
-      font-weight: 600;
-      padding-top: 35px; }
-      .account-profile .usrinfo2 .item li:nth-child(2) {
-        padding-left: 4.5%;
-        padding-right: 7.3%; }
-      .account-profile .usrinfo2 .item li:nth-child(3) {
-        padding-right: 4.5%; }
-    .account-profile .usrinfo2 .subinfo {
-      display: inline-block;
-      width: 64%; }
+    padding-top: 45px; }
     .account-profile .usrinfo2 .buttons {
       display: inline-block;
       float: right;
-      width: 34%;
+      width: 30%;
       margin: 1%; }
     .account-profile .usrinfo2 .button {
       display: inline-block;
       border: 2px solid #e64142;
       color: #e64142;
       width: 100%;
-      margin-top: 1.5%;
-      margin-bottom: 1.5%;
+      margin-top: 2%;
+      margin-bottom: 2%;
       height: 55px;
-      text-align: center; }
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer; }
     .account-profile .usrinfo2 .button p {
       padding-top: 16px;
-      font-size: 18px; }
+      font-size: 18px;
+      display: inline-block;
+      padding-right: 7px; }
+
+.subinfo {
+  display: inline-block;
+  width: 68%;
+  color: #b4dfd6;
+  margin-top: 1%;
+  margin-bottom: 1%; }
+  .subinfo p {
+    font-size: 110px;
+    font-weight: 800;
+    padding-top: 30px;
+    line-height: inherit; }
+  .subinfo h2 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 50px; }
+  .subinfo div {
+    text-align: center;
+    display: inline-block;
+    padding-right: 6%;
+    width: 18%;
+    margin-top: 1%; }
+
+#follow.active {
+  background-color: #e64142;
+  color: white; }
+
+#invite.active {
+  background-color: #e64142;
+  color: white; }
 
 /***************/
 .mywork {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; }
+
+.mywork, .mygroup {
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 70px;
-  padding-bottom: 60px; }
+  padding-bottom: 80px; }
 
 .wrk_ctgry {
   text-align: center;
@@ -104,7 +113,7 @@
   padding-left: 10px;
   padding-right: 10px; }
 
-.myprojects .upload {
+.myprojects .upload, .mygroups .upload {
   width: 30%;
   height: 200px;
   margin: 1%;
@@ -113,7 +122,7 @@
   background-color: #e64142;
   text-align: center;
   color: #ffffff; }
-  .myprojects .upload i {
+  .myprojects .upload i, .mygroups .upload i {
     font-size: 32px;
     position: relative;
     display: block;
@@ -121,16 +130,17 @@
     transform: translateY(-50%);
     transition: all 0.3s linear; }
 
-.myprojects .upload:hover i {
+.myprojects .upload:hover i, .mygroups .upload:hover i {
   font-size: 46px; }
 
-.myprojects div.project {
+.myprojects div.project, .mygroups div.group {
   width: 30%;
   height: 200px;
   margin: 1%;
   display: block;
   float: left;
-  background-color: #b3b3b3; }
+  background-color: #b3b3b3;
+  cursor: pointer; }
 
 .myprojects div:last-of-type {
   float: none; }
@@ -139,29 +149,136 @@
   color: #37afa2;
   text-align: center; }
 
-@media screen and (max-width: 1300px) {
-  .account-profile .usrinfo2 .item {
-    font-size: 1.7em; }
-  .account-profile .usrinfo2 .numbers {
-    font-size: 5.7em; } }
+.mygroup {
+  background-color: #b4dfd6; }
 
-@media screen and (max-width: 1190px) {
-  .account-profile .usrinfo2 .item {
-    font-size: 1.5em; }
-  .account-profile .usrinfo2 .numbers {
-    font-size: 5em; } }
+.mygroup h1 {
+  color: #034d5b;
+  text-align: center; }
 
-@media screen and (max-width: 1090px) {
-  .account-profile .usrinfo2 .item {
-    font-size: 1.3em; }
-  .account-profile .usrinfo2 .numbers {
-    font-size: 4.4em; } }
+.mygroups {
+  padding-top: 40px; }
 
-@media screen and (max-width: 800px) {
-  .account-profile .usrinfo2 .item {
-    font-size: 1.1em; }
-  .account-profile .usrinfo2 .numbers {
-    font-size: 3.8em; } }
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  .account-profile .subinfo h2 {
+    font-size: 24px;
+    padding-top: 30px; }
+  .account-profile .subinfo p {
+    font-size: 80px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .account-profile {
+    height: 450px;
+    padding-left: 110px;
+    padding-right: 110px; }
+    .account-profile .subinfo {
+      display: block;
+      width: 64%;
+      float: left; }
+    .account-profile .usrinfo2 .buttons {
+      display: inline-flex;
+      margin: 1%;
+      width: 38%; }
+    .account-profile #follow.button {
+      margin-right: 12px; }
+    .account-profile .subinfo {
+      width: 58%;
+      margin-right: 1%; }
+    .account-profile .subinfo h2 {
+      font-size: 16px;
+      padding-top: 10px; }
+    .account-profile .subinfo p {
+      font-size: 50px;
+      padding-top: 10px; }
+    .account-profile p.usr3 {
+      font-size: .8em;
+      font-weight: 100; }
+    .account-profile .button p {
+      padding-right: 2px; }
+  .myprojects div.project, .myprojects div.upload, .mygroups div.group, .mygroups div.upload {
+    width: 47.62763%;
+    height: 250px; }
+  .mywork, .mygroup {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 70px;
+    padding-bottom: 60px; } }
+
+@media screen and (min-width: 320px) and (max-width: 785px) {
+  .account-profile {
+    height: 540px;
+    padding-left: 70px;
+    padding-right: 70px; }
+    .account-profile .usrinfo1 {
+      padding-top: 60px;
+      display: block;
+      text-align: center; }
+    .account-profile .usrinfo {
+      padding: 1% 0% 1% 0%;
+      width: 100%; }
+    .account-profile .profpic {
+      padding: 1% 0 1% 0;
+      margin: 0; }
+    .account-profile .mywork h1, .account-profile .mygroup h1 {
+      font-size: 18px;
+      padding-top: 2px;
+      padding-bottom: 2px; }
+    .account-profile p.usr2 {
+      font-size: 12px; }
+    .account-profile .profpic img {
+      width: 70px; }
+    .account-profile .subinfo div {
+      padding-right: 2%;
+      padding-left: 2%;
+      width: 19.5%;
+      margin-top: 1%; }
+    .account-profile .usrinfo2 {
+      padding-top: 25px; }
+      .account-profile .usrinfo2 .subinfo {
+        display: block;
+        width: 100%;
+        float: left; }
+      .account-profile .usrinfo2 .buttons {
+        display: inline-flex;
+        margin: 1%;
+        width: 100%;
+        float: none;
+        padding-top: 28px; }
+      .account-profile .usrinfo2 .button {
+        height: 40px; }
+        .account-profile .usrinfo2 .button p {
+          padding-top: 9px;
+          font-size: 14px;
+          padding-right: 2px; }
+      .account-profile .usrinfo2 #follow.button {
+        margin-right: 15px; }
+      .account-profile .usrinfo2 .subinfo h2 {
+        font-size: 13px;
+        padding-top: 5px; }
+      .account-profile .usrinfo2 .subinfo p {
+        font-size: 36px;
+        padding-top: 10px; }
+      .account-profile .usrinfo2 p.usr3 {
+        font-size: .7em;
+        font-weight: 100; }
+  .myprojects div.project, .mygroups div.group, .myprojects div.upload, .mygroups div.upload {
+    width: 100%;
+    height: 300px;
+    margin-top: 5px; }
+  .mywork, .mygroup {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .wrk_ctgry {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-weight: 600; }
+  li {
+    padding-right: 4.5px;
+    padding-left: 4.5px; } }
 
 .newwork {
   position: fixed;
@@ -368,6 +485,22 @@ header.navbar {
     padding-right: 20px; }
   header.navbar .mypg img {
     height: 36px; }
+
+@media screen and (min-width: 320px) and (max-width: 785px) {
+  header.navbar {
+    height: 40px; }
+    header.navbar .logo img {
+      height: 25px; }
+    header.navbar .logo {
+      padding: 9px 14px 0px 13px; }
+    header.navbar .mypg {
+      padding: 10px 14px 0px 40px; }
+    header.navbar .mypg img {
+      height: 20px; }
+    header.navbar .mypg .username {
+      padding-top: 0;
+      padding-right: 10px;
+      font-size: 12px; } }
 
 .popular-designs {
   padding: 0 calc(42% - 445px);
