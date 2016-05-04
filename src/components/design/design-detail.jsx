@@ -7,7 +7,8 @@ var Link = Router.Link;
 
 module.exports = React.createClass({
     getInitialState: function(){
-        return {cmtType: 'all', design: {}};
+        return {cmtType: 'all', design: {},
+               addingCmt: false};
     },
     componentWillMount: function(){
         this.setState({design: {
@@ -19,6 +20,9 @@ module.exports = React.createClass({
     onShowCmt: function(type){
         this.setState({cmtType: type});
         console.log(this.state.cmtType);
+    },
+    setMouseState: function(state){
+        this.setState({addingCmt: state});
     },
   render: function() {
     return <div className="design-detail">
@@ -36,8 +40,8 @@ module.exports = React.createClass({
             </div>
         </div>
         <div className="content-container">
-            <DesignWork onShowCmt={this.onShowCmt} />    
-            <div className="comments-container col-md-4"><Comments type={this.state.cmtType} comments={this.state.design.comments} /></div>
+            <DesignWork onShowCmt={this.onShowCmt} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/>    
+            <div className="comments-container col-md-4"><Comments type={this.state.cmtType} comments={this.state.design.comments} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/></div>
         </div>
     </div>
     
