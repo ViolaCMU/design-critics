@@ -16,7 +16,8 @@
     margin-right: 3%; }
   .account-profile .profpic img {
     width: 135px;
-    height: auto; }
+    height: auto;
+    border-radius: 200px; }
   .account-profile .usrinfo1 {
     padding-top: 80px;
     display: inline-flex; }
@@ -29,7 +30,7 @@
     padding-top: 5px;
     padding-bottom: 5px; }
   .account-profile p.usr3 {
-    font-size: .9em;
+    font-size: 1em;
     font-weight: 100;
     padding-top: 20px;
     line-height: 1.5em; }
@@ -61,7 +62,7 @@
   display: inline-block;
   width: 68%;
   color: #b4dfd6;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 1%; }
   .subinfo p {
     font-size: 110px;
@@ -191,8 +192,8 @@
       font-size: 50px;
       padding-top: 10px; }
     .account-profile p.usr3 {
-      font-size: .8em;
-      font-weight: 100; }
+      font-weight: 100;
+      padding: 10px; }
     .account-profile .button p {
       padding-right: 2px; }
   .myprojects div.project, .myprojects div.upload, .mygroups div.group, .mygroups div.upload {
@@ -252,15 +253,15 @@
           padding-right: 2px; }
       .account-profile .usrinfo2 #follow.button {
         margin-right: 15px; }
-      .account-profile .usrinfo2 .subinfo h2 {
-        font-size: 13px;
-        padding-top: 5px; }
-      .account-profile .usrinfo2 .subinfo p {
-        font-size: 36px;
-        padding-top: 10px; }
-      .account-profile .usrinfo2 p.usr3 {
-        font-size: .7em;
-        font-weight: 100; }
+    .account-profile .usrinfo2 .subinfo h2, .account-profile usrinfo1 .subinfo h2 {
+      font-size: 13px;
+      padding-top: 5px; }
+    .account-profile .usrinfo2 .subinfo p, .account-profile usrinfo1 .subinfo p {
+      font-size: 36px;
+      padding-top: 10px; }
+    .account-profile p.usr3 {
+      font-size: .8em;
+      font-weight: 100; }
   .myprojects div.project, .mygroups div.group, .myprojects div.upload, .mygroups div.upload {
     width: 100%;
     height: 300px;
@@ -372,10 +373,14 @@
     color: #034d5b;
     border: 2px solid #034d5b;
     line-height: 55px; }
+    .design-detail .design-intro-section:nth-of-type(2) .follow span {
+      padding-right: 7px; }
 
 .design-detail .design-work {
   height: 1000px;
   position: relative; }
+  .design-detail .design-work .design_title_mobile {
+    display: none; }
   .design-detail .design-work .design-work-img {
     width: 100%; }
   .design-detail .design-work .btn-bar {
@@ -421,45 +426,157 @@
     transform: translate(-50%, -50%) scale(1); } }
 
 .design-detail .comments-container {
-  height: 1000px; }
+  height: 1000px;
+  background: #ffffff; }
   .design-detail .comments-container .title {
     width: 100%; }
-  .design-detail .comments-container .comments-list .comment {
-    background: #ffffff; }
-    .design-detail .comments-container .comments-list .comment .avatar {
-      overflow: hidden; }
-    .design-detail .comments-container .comments-list .comment .profpic {
-      padding: 10px 20px;
-      float: left; }
-    .design-detail .comments-container .comments-list .comment .profpic img {
-      width: 50px; }
-    .design-detail .comments-container .comments-list .comment p.comment-text {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.4em; }
-    .design-detail .comments-container .comments-list .comment .comment-number {
+  .design-detail .comments-container .mobile-comment-title {
+    display: none; }
+  .design-detail .comments-container .comments-list {
+    overflow-y: scroll;
+    height: 850px; }
+    .design-detail .comments-container .comments-list .comment {
+      background: #ffffff;
+      border-bottom: 1px solid #F8F8F8; }
+      .design-detail .comments-container .comments-list .comment .avatar {
+        margin: 10px 20px 0 20px;
+        overflow: hidden;
+        position: relative; }
+      .design-detail .comments-container .comments-list .comment .profpic {
+        padding: 10px 20px;
+        float: left; }
+      .design-detail .comments-container .comments-list .comment .profpic img {
+        width: 50px; }
+      .design-detail .comments-container .comments-list .comment p.comment-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4em; }
+      .design-detail .comments-container .comments-list .comment .comment-number {
+        display: block;
+        width: 12px;
+        height: 16px;
+        border-radius: 20px;
+        background: #E64142;
+        font-size: 18px;
+        color: white;
+        font-weight: 900;
+        padding: 10px 12px;
+        float: right;
+        margin: 15px; }
+      .design-detail .comments-container .comments-list .comment .comment-content {
+        padding: 15px 40px;
+        overflow: hidden; }
+      .design-detail .comments-container .comments-list .comment .comment-activity {
+        overflow: hidden; }
+      .design-detail .comments-container .comments-list .comment .fa {
+        padding: 5px; }
+      .design-detail .comments-container .comments-list .comment .comment-agree {
+        float: right;
+        font-size: 12px;
+        color: #B3B3B3;
+        margin-right: 15px;
+        margin-bottom: 10px; }
+      .design-detail .comments-container .comments-list .comment .comment-agree.voted {
+        color: #E64142; }
+
+.design-detail a {
+  cursor: pointer; }
+
+@media screen and (max-width: 799px) {
+  /*description*/
+  .design-detail .design-intro-section {
+    box-sizing: border-box;
+    height: auto; }
+  .design-detail .col-md-8 {
+    width: 100%;
+    margin: 0;
+    float: left;
+    margin-top: 150px; }
+  /*profile*/
+  .design-detail .col-md-4 {
+    width: 100%;
+    margin: 0 0.5%;
+    float: left;
+    margin-top: -380px;
+    padding-bottom: 20px; }
+  .avatar {
+    margin-top: 15px;
+    overflow: hidden;
+    float: left; }
+  .design-detail .design-intro-section:nth-of-type(2) {
+    border-left: none;
+    padding-left: 0;
+    border-bottom: solid 0.5px #B3B3B3; }
+  .design-detail .design-intro-section .avatar img {
+    width: 40px;
+    height: 40px; }
+  .design-detail .design-intro-section .avatar h2 {
+    margin-top: 0px;
+    margin-left: 50px; }
+  .design-detail .design-intro-section .avatar p.sub-text {
+    margin-top: 25px;
+    margin-left: 50px; }
+  .design-detail .design-intro-section:nth-of-type(2) .follow {
+    height: 55px;
+    width: 80px;
+    color: #034d5b;
+    border: 2px solid #034d5b;
+    line-height: 55px;
+    float: right;
+    margin-top: 5px; }
+  /*design work*/
+  .design-detail .design-work {
+    height: auto;
+    position: relative;
+    margin-left: -35px;
+    margin-top: 20; }
+    .design-detail .design-work .design-work-img {
+      width: 100vw; }
+    .design-detail .design-work .design_title_mobile {
+      padding: 10px 35px;
+      color: #3B3B3B;
+      display: block; }
+  /*
+    <p class="sub-text design_mobile" style="
+        
+    ">Meydad's Design</p>
+    */
+  /*design comment*/
+  .design-detail .comments-container {
+    margin: 0 -35px;
+    height: auto; }
+    .design-detail .comments-container .mobile-comment-title {
       display: block;
-      width: 12px;
-      height: 16px;
-      border-radius: 20px;
-      background: #E64142;
-      font-size: 18px;
-      color: white;
-      font-weight: 900;
-      padding: 10px 12px;
-      float: right;
-      margin: 15px; }
-    .design-detail .comments-container .comments-list .comment .comment-content {
-      padding: 20px;
-      overflow: hidden; }
-    .design-detail .comments-container .comments-list .comment .comment-activity {
-      overflow: hidden; }
-    .design-detail .comments-container .comments-list .comment .fa {
-      padding: 5px; }
-    .design-detail .comments-container .comments-list .comment .comment-agree {
-      float: right;
-      font-size: 12px;
-      color: #E64142; }
+      width: 100vw; }
+  .design-detail .comments-container .title {
+    width: 100vw; }
+  .btn-sm {
+    padding-left: 0; }
+  /*sth bad happened here*/
+  .btn {
+    text-align: left; }
+  .design-detail .comments-container .comments-list {
+    overflow-y: initial;
+    margin-left: 20px;
+    margin-right: -55px; }
+  .design-detail .comments-container .comments-list .comment {
+    overflow: hidden; }
+  .design-detail .comments-container .comments-list .comment .comment-content {
+    padding: 5px;
+    overflow: hidden;
+    float: left;
+    width: 96%; }
+  .design-detail .comments-container .comments-list .comment .avatar {
+    overflow: initial; }
+    .design-detail .comments-container .comments-list .comment .avatar .profpic {
+      padding: 10px;
+      float: left; }
+    .design-detail .comments-container .comments-list .comment .avatar h2, .design-detail .comments-container .comments-list .comment .avatar p {
+      width: calc(100vw - 140px); }
+  .design-detail .comments-container .comments-list .comment .comment-activity {
+    overflow: hidden;
+    float: right;
+    margin-left: 35px; } }
 
 .header .active {
   font-weight: 600; }
@@ -484,7 +601,8 @@ header.navbar {
     padding-top: 10px;
     padding-right: 20px; }
   header.navbar .mypg img {
-    height: 36px; }
+    height: 36px;
+    border-radius: 18px; }
 
 @media screen and (min-width: 320px) and (max-width: 785px) {
   header.navbar {
@@ -507,19 +625,12 @@ header.navbar {
   margin: 50px auto;
   width: 1020px; }
 
-@media screen and (max-width: 1199px) {
-  .popular-designs {
-    width: 680px; } }
-
-@media screen and (max-width: 767px) {
-  .popular-designs {
-    width: 340px; } }
-
 .search {
   width: 100%; }
   .search form {
     width: 60%;
     height: 50px;
+    margin: 0 auto;
     margin-top: 60px;
     display: block;
     border-bottom: 1px solid #d3d3d3; }
@@ -539,17 +650,17 @@ header.navbar {
 .home-thumbnail {
   overflow: hidden;
   width: 320px;
-  height: 270px;
+  height: 318px;
   margin: 10px;
   display: inline-block;
   box-shadow: 0px 1px 15px -1px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.4s linear; }
   .home-thumbnail .info {
     height: 40px;
-    width: 92%;
+    width: 284px;
     background-color: #ffffff;
     overflow: hidden;
-    padding: 10px 4%; }
+    padding: 18px; }
     .home-thumbnail .info .profile {
       width: 40px;
       height: 40px;
@@ -565,15 +676,14 @@ header.navbar {
   .home-thumbnail .viewdata {
     font-size: 12px;
     float: right;
-    padding: 3%;
     color: #b3b3b3; }
   .home-thumbnail .description {
     height: 170px;
     z-index: 900;
     background: rgba(3, 77, 91, 0.85);
     position: absolute;
-    width: 280px;
-    padding: 20px;
+    width: 248px;
+    padding: 36px;
     display: block;
     opacity: 0;
     transition: opacity 0.6s ease-in;
@@ -582,7 +692,8 @@ header.navbar {
   .home-thumbnail .description_title {
     transform: translateY(200px);
     color: white;
-    transition: transform 0.3s ease-in; }
+    transition: transform 0.3s ease-in;
+    margin-bottom: 10px; }
   .home-thumbnail .description_words {
     transform: translateY(200px);
     position: relative;
@@ -595,7 +706,7 @@ header.navbar {
     width: 100%;
     margin: 0 auto;
     display: block;
-    height: 210px;
+    height: 242px;
     transition: all 0.6s linear; }
   .home-thumbnail .img_thumbnail {
     width: 100%;
@@ -610,6 +721,16 @@ header.navbar {
 
 .home-thumbnail:hover .description_title, .home-thumbnail:hover .description_words {
   transform: translateY(0); }
+
+@media screen and (max-width: 1199px) {
+  .popular-designs {
+    width: 680px; } }
+
+@media screen and (max-width: 767px) {
+  .popular-designs {
+    width: 340px; }
+  .search form {
+    width: 100%; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -709,12 +830,8 @@ p {
   margin: 0 8%;
   overflow: hidden; }
 
-@media screen and (max-width: 799px) {
-  .page-container {
-    margin: 0 20px; } }
-
 .fa {
-  font-size: 12px; }
+  font-size: 15px; }
 
 header.title {
   height: 50px;
@@ -783,3 +900,14 @@ header.title {
     margin-top: 42px;
     position: absolute;
     margin-left: 100px; }
+
+@media screen and (max-width: 799px) {
+  .page-container {
+    margin: 0 20px; }
+  .content-container {
+    overflow: inherit; }
+  .btn-bar {
+    width: 100vw;
+    background-color: #F8F8F8; }
+  .btn-bar .btn-2 {
+    display: none; } }

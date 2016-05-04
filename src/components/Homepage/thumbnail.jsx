@@ -19,7 +19,7 @@ module.exports = React.createClass({
         </div>
         <Link className="description" to="/design/1">
             <h1 className="description_title">Peronal Website</h1>
-            <p className="description_words">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to... </p>
+            <p className="description_words">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley... </p>
         </Link>
         <div className="thumbnail-bg">
             <img src="img/Main3.png" className="img_thumbnail" />

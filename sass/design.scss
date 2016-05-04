@@ -1,4 +1,5 @@
 $dgreen: #034d5b;
+$bgColor: #F8F8F8;
 $fontGrey: #B3B3B3;
 
 .design-detail {
@@ -52,11 +53,17 @@ $fontGrey: #B3B3B3;
             color: $dgreen;
             border: 2px solid $dgreen;
             line-height: 55px;
+            span {
+                padding-right: 7px;
+            }
         }
     }
     .design-work {
         height: 1000px;
         position: relative;
+        .design_title_mobile {
+            display: none;
+        }
         .design-work-img {
             width: 100%;
         }
@@ -122,16 +129,24 @@ $fontGrey: #B3B3B3;
     }
     .comments-container {
         height: 1000px;
+        background: #ffffff;
         .title {
             width: 100%;
         }
+        .mobile-comment-title {
+            display: none;
+        }
         .comments-list {
+            overflow-y: scroll;
+            height: 850px;
             .comment {
                 background: #ffffff;
+                border-bottom: 1px solid $bgColor;
                 .avatar {
                     //width: 400px;
-                   overflow: hidden;
-
+                    margin: 10px 20px 0 20px;
+                    overflow: hidden;
+                    position: relative;
                 }
 
                 .profpic {
@@ -163,8 +178,7 @@ $fontGrey: #B3B3B3;
                 }
 
                 .comment-content{
-
-                    padding: 20px;
+                    padding: 15px 40px;
                     //width: 400px;
                     overflow: hidden;
                 }
@@ -179,10 +193,163 @@ $fontGrey: #B3B3B3;
                 .comment-agree{
                     float: right;
                     font-size: 12px;
+                    color: $fontGrey;
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                }
+                .comment-agree.voted{
                     color: #E64142;
                 }
             }
         }
     }
+    a {
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    /*description*/
+    .design-detail .design-intro-section {
+        box-sizing: border-box;
+        height:auto;
+    }
+
+    .design-detail .col-md-8 {
+        width: 100%;
+        margin: 0;
+        float: left;
+        margin-top: 150px;
+    }
+
+    /*profile*/
+    .design-detail .col-md-4 {
+        width: 100%;
+        margin: 0 0.5%;
+        float: left;
+        margin-top: -380px;
+        padding-bottom: 20px;
+//        border-bottom: solid 0.5px #B3B3B3;
+    }
+
+    .avatar {
+        margin-top: 15px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .design-detail .design-intro-section:nth-of-type(2) {
+        border-left: none;
+        padding-left:0;
+        border-bottom: solid 0.5px #B3B3B3;
+    }
+
+    .design-detail .design-intro-section .avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .design-detail .design-intro-section .avatar h2 {
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+
+    .design-detail .design-intro-section .avatar p.sub-text {
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .design-detail .design-intro-section:nth-of-type(2) .follow {
+        height: 55px;
+        width: 80px;
+        color: #034d5b;
+        border: 2px solid #034d5b;
+        line-height: 55px;
+        float: right;
+        margin-top: 5px;
+    }
+
+
+    /*design work*/
+
+    .design-detail .design-work {
+        height: auto;
+        position: relative;
+        margin-left: -35px;
+        margin-top: 20;
+        .design-work-img {
+            width: 100vw;
+        }
+        .design_title_mobile {
+            padding: 10px 35px;
+            color: #3B3B3B;
+            display: block;
+        }
+    }
+
+
+
+    /*
+    <p class="sub-text design_mobile" style="
+        
+    ">Meydad's Design</p>
+    */
+
+    /*design comment*/
+
+    .design-detail .comments-container {
+        margin: 0 -35px;
+        height: auto;
+        .mobile-comment-title {
+            display: block;
+            width: 100vw;
+        }
+    }
+
+    .design-detail .comments-container .title {
+        width: 100vw;
+    }
+
+    .btn-sm {
+        padding-left: 0;
+    }
+
+    /*sth bad happened here*/
+    .btn{
+        text-align: left;
+    }
     
+    .design-detail .comments-container .comments-list {
+        overflow-y: initial;
+        margin-left: 20px;
+        margin-right: -55px;
+    }
+
+    .design-detail .comments-container .comments-list .comment {
+        overflow: hidden;
+    }
+    .design-detail .comments-container .comments-list .comment .comment-content {
+        padding: 5px;
+        overflow: hidden;
+        float: left;
+        width: 96%;
+    }
+
+    .design-detail .comments-container .comments-list .comment .avatar {
+        overflow: initial;
+        .profpic {
+            padding: 10px;
+            float: left;
+        }
+        h2, p {
+            width: calc(100vw - 140px);
+        }   
+    }
+
+    .design-detail .comments-container .comments-list .comment .comment-activity {
+        overflow: hidden;
+        float: right;
+        margin-left: 35px;
+    }
+
 }
