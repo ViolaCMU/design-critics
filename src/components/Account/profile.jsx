@@ -1,6 +1,26 @@
 var React = require('react');
 
 module.exports = React.createClass({
+    getInitialState: function() {
+        return {
+            followed: '',
+            invited: ''
+        };
+    },
+    toggleFollow: function(){
+        if(this.state.followed === ''){
+            this.setState({followed: 'active'});  
+        }else{
+            this.setState({followed: ''});  
+        }
+    },
+    toggleInvite: function(){
+        if(this.state.invited === ''){
+            this.setState({invited: 'active'});  
+        }else{
+            this.setState({invited: ''});  
+        }
+    },
   render: function() {
     return <div>
         <div className="account-profile">
@@ -13,27 +33,37 @@ module.exports = React.createClass({
                 </div>
             </div>
         
-                
             <div className="usrinfo2">
-                <div className="subinfo">    
-                    <ul className="numbers">
-                        <li>14</li>
-                        <li>07</li>
-                        <li>11</li>
-                        <li>22</li>
-                    </ul>
+                <div className="subinfo">
+                    <div className="num_project">
+                        <p>14</p>
+                        <h2>project</h2>
+                    </div>
 
-                    <ul className="item">
-                        <li>Project</li>
-                        <li>Group</li>
-                        <li>Following</li>
-                        <li>Follower</li>
-                    </ul>
+                    <div className="num_group">
+                        <p>07</p>
+                        <h2>group</h2>
+                    </div>
+
+                    <div className="num_following">
+                        <p>35</p>
+                        <h2>following</h2>
+                    </div>
+
+                    <div className="num_follower">
+                        <p>22</p>
+                        <h2>follower</h2>
+                    </div>
                 </div>
 
                 <div className="buttons">
-                    <div className="button"><p>Follow</p></div>
-                    <div className="button"><p>Invite</p></div>
+                    <a className={"button " + this.state.followed} id="follow" onClick={this.toggleFollow}>
+                        <p>Follow</p>
+                        <i className="fa fa-check" aria-hidden="true"></i></a>
+                    <a className={"button " + this.state.invited} id="invite" onClick={this.toggleInvite}>
+                        <p>Invite</p>
+                        <i className="fa fa-user-plus" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>

@@ -38,3 +38,30 @@ header.navbar {
     }
 }
 
+@media screen and (min-width : 320px) and (max-width: 785px) {
+    header.navbar {
+        height: 40px;
+    
+        .logo img {
+            height: 25px;
+        }
+
+        .logo {
+            padding: 9px 14px 0px 13px;
+        }
+
+        .mypg {
+            padding: 10px 14px 0px 40px;
+        }
+
+        .mypg img {
+            height: 20px;
+        }
+
+        .mypg .username {
+            padding-top: 0;
+            padding-right: 10px;
+            font-size: 12px;
+        }
+    }
+}
