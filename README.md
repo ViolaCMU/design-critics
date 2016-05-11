@@ -26,4 +26,5 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 	> npm install
 	> gulp
 ```
-###Project Demo###()
+____________________________________________________________________
+[Project Demo](http://violacmu.github.io/design-critics)
