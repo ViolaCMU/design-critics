@@ -1,25 +1,28 @@
 var React = require('react');
-var ReactFire = require('reactfire');
+var ReactFireMixin = require('reactfire');
 var Firebase = require('firebase');
 var rootUrl = 'https://resplendent-heat-8533.firebaseio.com/';
 
 module.exports = React.createClass({
-    mixins: [ ReactFire ],
+    mixins: [ReactFireMixin],
     getInitialState: function() {
         return {
-            designs: [],
             title: '',
             description: '',
-            image: ''
+            image_uri: '',
+            filename: 'Choose a file'
         };
     },
     componentWillMount: function(){
-        var FirebaseRef = new Firebase(rootUrl + 'designs/');
-        this.bindAsArray(FirebaseRef, "designs");
-        console.log(this);
-        //this.bindAsObject(new Firebase(rootUrl + 'designs/'), 'designs');
+        this.bindAsArray(new Firebase(rootUrl + 'designs/'), "designs");
     },
-    handleFile: function(){
+    handleTitle: function(e){
+        this.setState({title: e.target.value});
+    },
+    handleDesc: function(e){
+        this.setState({description: e.target.value});
+    },
+    handleFile: function(e){
         var self = this;
         var reader = new FileReader();
         var file = e.target.files[0];
@@ -27,6 +30,7 @@ module.exports = React.createClass({
         reader.onload = function(upload) {
           self.setState({
             image_uri: upload.target.result,
+            filename: file.name
           });
         }
 
@@ -37,28 +41,33 @@ module.exports = React.createClass({
         this.firebaseRefs["designs"].push({
             title: this.state.title,
             description: this.state.description,
-            image: this.state.image_uri
+            image: this.state.image_uri,
+            author: 'Amenda',
+            comments: []
         });
-//        this.setState({text: ""});
+        this.props.dismiss();
+        this.setState({title: '',
+            description: '',
+            image_uri: '',
+            filename: 'Choose a file'});
     },
   render: function() {
-      console.log(this.state.designs);
     return <div className="addDesignModal">
         <header className="title"><h3>Upload new work</h3></header>
         <div className="content-container">
             <form action="" method="post">
               <div className="form-row">
                 <span className="form-label">Title</span>
-                <input type="text" name="title" value={this.state.title} />
+                <input type="text" name="title" value={this.state.title} onChange={this.handleTitle}/>
               </div>
               <div className="form-row">
                 <span className="form-label">Description</span>
-                <input type="text" name="desciption" value={this.state.description} />
+                <input type="text" name="desciption" value={this.state.description} onChange={this.handleDesc} />
               </div>    
               <div className="form-row">
                 <span className="form-label">Work shot</span>
                 <input type="file" id="design-file" accept=".png, .jpg, .jpeg" name="design" onChange={this.handleFile} /> 
-                <label htmlFor="design-file">Choose a file</label>
+                <label htmlFor="design-file">{this.state.filename}</label>
               </div>
             </form>
         </div>

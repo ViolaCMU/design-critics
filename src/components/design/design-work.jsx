@@ -79,7 +79,7 @@ module.exports = React.createClass({
             <a className={"btn btn-2 btn-sm " + this.state.myCmtState} onClick={this.showMyCmt} >My Comment</a>
             <a className={"btn btn-2 btn-sm " + this.state.allCmtState} onClick={this.showAllCmt} >All Comments</a>
         </header>
-        <image className="design-work-img" src="./img/design06.jpg" ref="designWork" onClick={this.addCircle} />
+        <image className="design-work-img" src={this.props.image} ref="designWork" onClick={this.addCircle} />
         {circles}
     </div>
     
