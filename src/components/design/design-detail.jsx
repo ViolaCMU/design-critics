@@ -4,18 +4,26 @@ var DesignWork = require('./design-work');
 var Comments = require('./comment-section');
 var Avatar = require('../Layout/avatar');
 var Link = Router.Link;
+var ReactFire = require('reactfire');
+var Firebase = require('firebase');
+var rootUrl = 'https://resplendent-heat-8533.firebaseio.com/';
 
 module.exports = React.createClass({
+    mixins: [ReactFire],
     getInitialState: function(){
-        return {cmtType: 'all', design: {},
-               addingCmt: false, followed: ''};
-    },
-    componentWillMount: function(){
-        this.setState({design: {
+        return {cmtType: 'all', design: {
             author:{},
             image:'',
             comments: [1,2,3]
-        }});
+        },
+               addingCmt: false, followed: '',
+               };
+    },
+    componentWillMount: function(){
+        this.design_id = this.props.location.pathname.substring(8);
+        console.log(this.design_id);
+        this.bindAsObject(new Firebase(rootUrl + 'designs/' + this.design_id), "design");
+        //console.log(this.state.design_db);
     },
     onShowCmt: function(type){
         this.setState({cmtType: type});
@@ -32,11 +40,12 @@ module.exports = React.createClass({
         }
     },
   render: function() {
+        console.log(this.state.design);
     return <div className="design-detail">
         <div className="design-intro">
             <div className="content-container">
                 <div className="col-md-8 design-intro-section">
-                    <h1>Shopping website design</h1>
+                    <h1>{this.state.design.title}</h1>
                     <p className="sub-text">Post 1 month ago</p>
                     <p className="design-description">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>  
                 </div>
@@ -47,8 +56,8 @@ module.exports = React.createClass({
             </div>
         </div>
         <div className="content-container">
-            <DesignWork onShowCmt={this.onShowCmt} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/>    
-            <div className="comments-container col-md-4"><Comments type={this.state.cmtType} comments={this.state.design.comments} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/></div>
+            <DesignWork image={this.state.design.image} onShowCmt={this.onShowCmt} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/>    
+            <div className="comments-container col-md-4"><Comments type={this.state.cmtType} design_id={this.design_id} comments={this.state.design.comments} mouseState={this.state.addingCmt} setMouseState={this.setMouseState}/></div>
         </div>
     </div>
     

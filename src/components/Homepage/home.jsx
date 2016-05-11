@@ -1,8 +1,24 @@
 var React = require('react');
 var Thumbnail = require('./thumbnail');
+var ReactFire = require('reactfire');
+var Firebase = require('firebase');
+var rootUrl = 'https://resplendent-heat-8533.firebaseio.com/';
 
 module.exports = React.createClass({
+    mixins: [ReactFire],
+    getInitialState: function() {
+        return {
+            designs: []
+        };
+    },
+    componentWillMount: function() {
+      this.bindAsArray(new Firebase(rootUrl + 'designs/'), "designs");
+    },
   render: function() {
+      var gallery = this.state.designs.map(function(design){
+              return <Thumbnail design={design} key={design['.key']} avatar="user4.jpg" />
+          });
+      console.log(this.state.designs);
     return <div className="page-container">
         <div className="search">
             <form>
@@ -11,13 +27,9 @@ module.exports = React.createClass({
             </form>
         </div>
         <div className="popular-designs">
-            <Thumbnail design="./img/design_work/design06.jpg" author="Alice" avatar="user4.jpg" />
-            <Thumbnail design="./img/design_work/design05.jpg" author="Tomas" avatar="user1.jpg" />
-            <Thumbnail design="./img/design_work/design15.jpg" author="Julio" avatar="user2.jpg" />
-            <Thumbnail design="./img/design_work/design17.jpg" author="Amenda" avatar="user3.jpg" />
-            <Thumbnail design="./img/design_work/design16.jpg" author="Amenda" avatar="user3.jpg" />
-            <Thumbnail design="./img/design_work/design18.jpg" author="Tomas" avatar="user1.jpg" />
+            {gallery}
         </div>
+            
     </div>
   }
 });

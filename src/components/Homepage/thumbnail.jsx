@@ -4,10 +4,11 @@ var Link = Router.Link;
 
 module.exports = React.createClass({
   render: function() {
+      console.log();
     return <div className="home-thumbnail">
         <div className="info">       
             <div className="profile"></div>
-            <h2 className="username">{this.props.author}</h2>
+            <h2 className="username">{this.props.design.author}</h2>
             <div className="viewdata">
                 <div>
                     <i className="fa fa-eye"></i> 1235
@@ -17,12 +18,12 @@ module.exports = React.createClass({
                 </div>
             </div>
         </div>
-        <Link className="description" to="/design/1">
-            <h1 className="description_title">Peronal Website</h1>
-            <p className="description_words">XXX is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley... </p>
+        <Link className="description" to={"/design/"+this.props.design['.key']}>
+            <h1 className="description_title">{this.props.design.title}</h1>
+            <p className="description_words">{this.props.design.description}</p>
         </Link>
         <div className="thumbnail-bg">
-            <img src={this.props.design} className="img_thumbnail" />
+            <img src={this.props.design.image} className="img_thumbnail" />
         </div>
     </div>
   }
