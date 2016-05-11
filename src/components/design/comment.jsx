@@ -4,7 +4,7 @@ var Avatar = require('../Layout/avatar');
 module.exports = React.createClass({
   render: function() {
     return <li className="comment">
-        <Avatar />
+        <Avatar author="Amenda" />
         <div className="comment-content">
             <p className="comment-text">{this.props.cmt.content}</p>
         </div>
