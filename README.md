@@ -27,4 +27,4 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 	> gulp
 ```
 ____________________________________________________________________
-[Project Demo](http://violacmu.github.io/design-critics)
+[Project Demo](http://violacmu.github.io/design-critics/#/home)
